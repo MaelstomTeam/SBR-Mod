@@ -1,0 +1,12 @@
+[
+	{
+		"modid": "sbr",
+		"description": "Save, Backup & Restore",
+		"mcversion": "1.7.10",
+		"authors": [
+			"hybolic"
+		],
+		"guiFactory": "com.maelstrom.sbr.GuiFactory",
+		"version": "HARDCORE NINJA"
+	}
+]
