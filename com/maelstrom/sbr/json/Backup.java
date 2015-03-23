@@ -30,6 +30,14 @@ public class Backup {
 		metaName = "###";
 	}
 	
+	public Backup(String desc, String fil, String metaName2) {
+		date = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
+		time = new SimpleDateFormat("HH:mm:ss").format(new Date());
+		file = fil;
+		description = desc;
+		metaName = metaName2;
+	}
+	
 	public Backup(SaveFormatComparator save){
 		date = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
 		time = new SimpleDateFormat("HH:mm:ss").format(new Date());

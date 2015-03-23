@@ -132,9 +132,8 @@ public class GuiRestoreSave extends GuiScreen {
 	            name = field_146637_u + " " + (p_148126_1_ + 1);
 	        }
 
-	        String time = world.getFileName();
+	        String time = world.getDescription();
 	        String gameData = "(" + world.getDate() + " " + world.getTime() + ")";
-//	        String gameData = "";
 
 	        drawString(GuiRestoreSave.this.fontRendererObj, name, p_148126_2_ + 2, p_148126_3_ + 1, 16777215);
 	        drawString(GuiRestoreSave.this.fontRendererObj, time, p_148126_2_ + 2, p_148126_3_ + 12, 8421504);

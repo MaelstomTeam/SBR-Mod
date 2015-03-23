@@ -148,8 +148,8 @@ public class GuiSaveViewer extends GuiScreen{
 				break;
 				}
 			case 1:{
-//		    	mc.displayGuiScreen(new GuiBackupScreen(selection, this));
-				this.addBackup(saves.get(selection).getFileName(), "backup of " + saves.get(selection).getDisplayName());
+		    	mc.displayGuiScreen(new GuiBackupScreen(saves.get(selection), this));
+//				this.addBackup(saves.get(selection).getFileName(), "backup of " + saves.get(selection).getDisplayName());
 				this.restore.enabled = true;
 				break;
 			}
@@ -300,6 +300,18 @@ public class GuiSaveViewer extends GuiScreen{
 		readJson();
 	}
 	
+	public static void addBackup(World w, String metaName, String desc){
+		w.addBackup(new Backup(desc, metaName));
+		
+		String loc = ("/sbr/world backups/" + w.getName() + "/" + metaName + ".zip");
+		try {
+			Zipper.zipFolder(new File(Minecraft.getMinecraft().mcDataDir, "/saves/" + w.getName()), new File(Minecraft.getMinecraft().mcDataDir, loc));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		writeJson(worldArray);
+		readJson();
+	}
 	
 	
 	

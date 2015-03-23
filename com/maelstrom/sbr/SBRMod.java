@@ -17,9 +17,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid=SBRMod.modID, name="Save, Backup & Restore", version="Beta 0.0.1.95", useMetadata = true, guiFactory = "com.maelstrom.sbr.gui.GuiFactory")
+@Mod(modid=SBRMod.modID, name="Save, Backup & Restore", version="Beta 0.0.1.134", useMetadata = true, guiFactory = "com.maelstrom.sbr.gui.GuiFactory")
 public class SBRMod {
-	public static final int version = 4;
+	public static final int version = 5; //config reseter because im lazy ;p
 	
 	
 	public static Configuration configFile;
@@ -63,6 +63,7 @@ public class SBRMod {
 		if(configFile.hasChanged())
 			configFile.save();
 		
+		//config reseter because im lazy ;p
 		if(configVersion != version){
 			try {
 				Files.deleteIfExists(configFile.getConfigFile().toPath());
