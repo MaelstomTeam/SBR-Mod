@@ -19,7 +19,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 @Mod(modid=SBRMod.modID, name="Save, Backup & Restore", version="Beta 0.0.1.134", useMetadata = true, guiFactory = "com.maelstrom.sbr.gui.GuiFactory")
 public class SBRMod {
-	public static final int version = 5; //config reseter because im lazy ;p
+	public static final int version = 6; //config reseter because im lazy ;p
 	
 	
 	public static Configuration configFile;
